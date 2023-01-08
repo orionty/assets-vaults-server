@@ -114,11 +114,11 @@ app.post("/send/mail", (req, res) => {
     },
   });
 
-  const message = `Name: ${req.body.name} \n\n Email: ${req.body.email} \n\n Message: ${req.body.message}`;
+  const message = `Name: ${req.body.name} \n\n Email: ${req.body.ContactEmail} \n\n Message: ${req.body.message}`;
   //mailOption
   const mailOption = {
     from: process.env.EMAIL,
-    to: req.body.email,
+    to: req.body.ContactEmail,
     text: message,
   };
   //sendMail
