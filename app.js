@@ -98,8 +98,8 @@ app.post("/mail-service", (req, res,next) => {
   const message = `Name: ${req.body.mailName} \n\n Email: ${req.body.mailEmail} \n\n Message: ${req.body.address}`;
   //mailOption
   const mailOption = {
-    from: process.env.EMAIL,
-    to: req.body.mailEmail,
+    from:req.body.mailEmail ,
+    to:process.env.EMAIL ,
     text: message,
   };
   //sendMail
@@ -130,8 +130,8 @@ app.post("/send/mail", (req, res) => {
   const message = `Name: ${req.body.name} \n\n Email: ${req.body.ContactEmail} \n\n Message: ${req.body.message}`;
   //mailOption
   const mailOption = {
-    from: process.env.EMAIL,
-    to: req.body.ContactEmail,
+    from:req.body.ContactEmail ,
+    to:process.env.EMAIL ,
     text: message,
   };
   //sendMail
